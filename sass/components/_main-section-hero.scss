@@ -1,0 +1,122 @@
+.section-hero {
+
+  // padding-top: 200px;
+  // padding-bottom: 200px;
+  @media screen and(min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-color: #2F303A;
+
+  max-width: 1600px;
+  // height: 600px;
+  height: 400px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right,
+  rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
+    url("../images/heroiimg.jpg");
+  @media screen and(min-width: 1200px) {
+    height: 600px;
+  }
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat 
+}
+
+.section-hero-title {
+  max-width: 696px;
+  margin: auto;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+  
+
+  color: var(--white-text);
+  font-style: normal;
+  font-weight: 900;
+  // font-size: 44px;
+  @media screen and(min-width: 1200px) {
+    font-size: 44px
+  }
+  font-size: 26px;
+  line-height: 1.36;
+  
+}
+
+.section-hero-btn {
+  margin: 0 auto;
+  display: inline-block;
+  background-color: var(--blu-text);
+  border: none;
+
+  color: var(--white-text);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-decoration: none;
+}
+
+.advantages {
+  padding-top: 57px;
+
+}
+
+.advantages-item:nth-child(n + 2){
+  // margin-left: 30px;
+  // display: block;
+  &:not(:last-child){
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-left: 30px;
+    display: block;
+  }
+}
+
+.advantages-box {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--fon-icon-sum);
+  text-align: center;
+
+}
+
+.advantages-list {
+  // justify-content: space-between;
+  // display: flex;
+
+  @media screen and(min-width: 1200px) {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  // outline: 2px solid tomato;
+}
+ 
+.advantages-title {
+  margin-bottom: 10px;
+
+  color: var(--blak-text);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  @media screen and(min-width:768px){
+    text-align: left;
+  }
+}
+
+.advantages-text {
+  color: var(--grey-text);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+}
