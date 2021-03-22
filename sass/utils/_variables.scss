@@ -1,0 +1,53 @@
+
+:root {
+  --blu-text: #2196F3;
+  --blak-text: #212121;
+  --grey-text: #757575;
+  --white-text: #FFFFFF;
+  --text-color: rgba(255, 255, 255, 0.6);
+  --card-set: 30px;
+  --fon-icon-sum: #F5F4FA;
+  --color-icon: #AFB1B8;
+  
+}
+
+body {
+
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 9px 32px 9px 32px;
+  display: inline-block;
+  color: var(--white-text);
+
+  /*background-color: var(--blu-text);*/
+  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+}
