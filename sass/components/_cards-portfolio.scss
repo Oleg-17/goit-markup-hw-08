@@ -1,17 +1,43 @@
 .cards {
-  padding-top: 94px;
-  padding-bottom: 120px;
+  // padding-top: 94px;
+  // padding-bottom: 120px;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
  
 .filters-item:nth-child(n+2) {
   margin-left: 8px;
-  
+
 }
 
 .filters-list {
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+  align-items: center;
+  // justify-content: center;
+  @media screen and(min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 50px;
+  }
   display: flex;
+  flex-wrap: wrap;
+}
+
+.filters-item {
+  margin-bottom: 15px;
+}
+
+.filters-item:nth-child(4){
+  @media screen and (max-width:768px) {
+    margin-left: 0;
+  }
 }
 
 .filters-item :hover{
@@ -46,18 +72,49 @@
 }
 
 .card-set {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  @media screen and (min-width: 768px ) {
+    flex-wrap: wrap;
+    display: flex;
+    // margin-top: -15px;
+    margin-left: -30px;
+  }
 
   /*outline: 2px solid rgb(17, 68, 209);*/
   list-style: none;
 
-  margin-left: calc( -1 * var(--card-set));
+  // margin-left: calc( -1 * var(--card-set));
   margin-top: calc( -1 * var(--card-set));
+
 }
 
 .card-item {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+ 
+  @media screen and(min-width: 768px) {
+    width: 354px;
+    // margin-top: 15px;
+    margin-left: 30px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 370px;
+
+    &:nth-child(n + 7) {
+      margin-bottom: 0;
+    }
+  }
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-imag {
+  width: 100%;
+  height: auto;
 }
 
 .card-item:hover {
@@ -65,9 +122,9 @@
 }
 
 .card-set > .card-item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: var(--card-set);
-  margin-top: var(--card-set);
+  // flex-basis: calc(100% / 3 - 30px);
+  // margin-left: var(--card-set);
+  // margin-top: var(--card-set);
 
   /*outline: 1px solid rgb(14, 241, 44);*/
 }
@@ -144,3 +201,4 @@
 
   /* outline: 1px solid rgb(14, 241, 44);*/
 }
+
