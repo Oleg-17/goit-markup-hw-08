@@ -22,6 +22,12 @@
 .modal {
   position: absolute;
   min-width: 528px;
+  @media screen and (min-width:48px) {
+    min-width: 450px;
+  }
+  @media screen and (min-width:1200px) {
+    min-width: 528px;
+  }
   min-height: 581px;
   background-color: var(--white-text);
 
@@ -36,7 +42,7 @@
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  min-width: 448px;
+  // min-width: 448px;
   
 }
 
