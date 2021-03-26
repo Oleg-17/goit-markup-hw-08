@@ -93,12 +93,20 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width:1200px) {
+    align-items: flex-start;
+  }
 }
 
 .contakts-list {
   align-items: center;
   display: flex;
   flex-direction: column;
+  @media screen and (min-width:1200px) {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .join-title {
