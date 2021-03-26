@@ -52,6 +52,7 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  outline: 2px solid tomato;
 }
 
 @media (min-width: 480px) {
@@ -69,6 +70,31 @@ img {
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
+  }
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .container {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -562,17 +588,58 @@ header.container {
 }
 
 .clients {
-  padding-top: 95px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.clients-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .clients-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -30px;
+  }
+}
+
+.clients-item {
+  height: 90px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.clients-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .clients-item {
+    width: 210px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-item {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    width: 170px;
+  }
+  .clients-item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 .clients-list * {
@@ -581,16 +648,12 @@ header.container {
   border-radius: 4px;
 }
 
-.clients-list :nth-child(n+2) {
-  margin-left: 30px;
-}
-
 .clients-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 170px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -614,10 +677,27 @@ header.container {
 }
 
 .footer {
-  /*margin-top: 100px;*/
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2F303A;
+}
+
+.footer-container {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .log {
@@ -670,23 +750,57 @@ header.container {
   text-decoration: none;
 }
 
-.footer-container {
+.join {
+  margin-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
 }
 
-.join {
-  margin-left: 70px;
-  /* padding-left: 70px;
-  padding-top: 72px; */
+@media screen and (min-width: 768px) {
+  .join {
+    margin-left: 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+  }
 }
 
 .footer-list {
-  width: 231;
+  margin-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contakts-list {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .join-title {
@@ -738,12 +852,54 @@ header.container {
 }
 
 .subscription {
-  margin-left: 93px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 93px;
+  }
 }
 
 .subscription-form {
-  position: relative;
   margin-top: 20px;
+  width: 100%;
 }
 
 .subscription-form .subscription-input {
@@ -752,7 +908,8 @@ header.container {
 
 .subscription-input {
   padding: 15px;
-  width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -763,13 +920,23 @@ header.container {
   color: var(--white-text);
 }
 
+@media screen and (min-width: 768px) {
+  .subscription-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription-input {
+    width: 358px;
+  }
+}
+
 .subscription-button {
-  position: absolute;
-  top: 50%;
-  left: 131%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
+  margin: 0 auto;
   padding: 10px 62px 10px 29px;
+  display: block;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -780,6 +947,15 @@ header.container {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription-button {
+    position: absolute;
+    top: 33%;
+    left: 100%;
+    margin-left: 12px;
+  }
 }
 
 .svg-send {
