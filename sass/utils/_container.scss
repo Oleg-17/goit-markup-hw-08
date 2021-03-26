@@ -1,7 +1,6 @@
 .container {
-
   // width: 1200px;
-  width: 100%;
+  // width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -27,10 +26,9 @@
     // display: flex;
     align-items: baseline;
     @media screen and (min-width: 1200px) {
-      // display: flex;
       display: flex;
       flex-wrap: wrap;
-      // justify-content: space-around;
+      
     } 
   }
 }
